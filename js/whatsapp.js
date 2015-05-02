@@ -26,7 +26,7 @@
     var handshake = function(){
         var variables = initializeVariables(readCookie("a"));
         createCookie("a", variables.a, 7);
-        return "whatsapp://send?text=" + encodeURIComponent("http://iomediamx.com/secure?p=" + variables.p + "&g=" + variables.g
+        return "whatsapp://send?text=" + encodeURIComponent("http://iomediamx.com/securewhats?p=" + variables.p + "&g=" + variables.g
                 + "&B=" + variables.A);
     }
     var decrypt = function(text){
@@ -37,7 +37,7 @@
         var variables = setVariables(getParameterByName('p'),getParameterByName('g'),readCookie("a"),getParameterByName('A'),getParameterByName('B'));
         createCookie("a", variables.a, 7);
         var encrypted = CryptoJS.AES.encrypt(text,""+variables.s);
-        return "whatsapp://send?text=" + encodeURIComponent("http://iomediamx.com/secure?msg=" + encrypted.toString() + "&p=" + variables.p + "&g=" + variables.g +
+        return "whatsapp://send?text=" + encodeURIComponent("http://iomediamx.com/securewhats?msg=" + encrypted.toString() + "&p=" + variables.p + "&g=" + variables.g +
                 "&A=" + variables.B + "&B=" + variables.A);
     };
     /*
