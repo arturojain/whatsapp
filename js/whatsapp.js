@@ -161,6 +161,8 @@
 
     if(getParameterByName('B') == ""){
         $startConversationLink.attr('href', handshake());
+        $inputText.hide();
+        $encrypt.hide();
     } else {
         $startConversation.hide();
         if(getParameterByName('msg') != ""){
