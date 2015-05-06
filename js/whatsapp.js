@@ -10,6 +10,10 @@
     $encrypt.click(function(){
         $encryptLink.attr('href', encrypt($inputText.val()));
     });
+
+    $startConversation.click(function(){
+        $startConversationLink.attr('href',handshake());
+    });
     //$decrypt.click(function(){
         //$outputText.val(decrypt(getParameterByName('msg')));
     //});
